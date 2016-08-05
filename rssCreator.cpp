@@ -9,6 +9,7 @@ using namespace std;
 #define WEBSITE_URL	"http://ironhorse.io/"
 #define WEBSITE_DESCRIPTION "IHI provides global brands with fully integrated solutions that drive demand and generate revenue for their products."
 
+static bool contains(const string&, const string&);
 static void replaceAll(string&, const string&, const string&);
 
 int main( int argc, char * argv[])
@@ -67,7 +68,7 @@ int main( int argc, char * argv[])
 }
 
 bool contains(const string& str, const string& substr) {
-	return str.find(substr) == string::npos;
+	return str.find(substr) != string::npos;
 }
 
 static void replaceAll(string& str, const string& from, const string& to) {
